@@ -32,8 +32,82 @@ h3 span {
 .jungWrap {background: #bdffcb;}
 /* header */
 
-/* Visual Swiper */
+/* Visual Swiper1 */
 
+
+.imageWrap {
+    width: 100%;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.imageWrap.img01{
+    background-image: url("../images/swiper02.jpg");
+}
+.imageWrap.img02{
+    background-image: url("../images/swiper03.jpg");
+}
+.imageWrap.img03{
+    background-image: url("../images/swiper04.jpg");
+}
+.imageWrap.img04{
+    background-image: url("../images/swiper05.jpg");
+}
+
+.texttWrap{
+    width: 1080px;
+    left:20%;
+}
+
+h2 {
+    font-size: 55px;
+    padding-bottom: 20px;
+    font-weight: 800;
+    color: #fff;
+}
+
+p {
+    font-size: 18px;
+    padding-bottom: 10px;
+    color: #fff !important
+}
+
+.btn {
+    width: 200px;
+    height: 50px;
+    background: #000;
+    color: #fff;
+    border-color: #01afff;
+    border-radius: 4px;
+    font-size: 18px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.btn:hover {
+    background-color: #000;
+    color: #fff;
+    border-color: #01afff;
+}
+
+.Swiper1 {
+ width: 100%;
+ overflow: hidden;
+}
+
+.Swiper1 .swiper-button-next {
+    color: #fff;
+    top : 40%;
+}
+
+.Swiper1 .swiper-button-prev {
+    color: #fff;
+    top : 40%;
+}
 /* Card type1 */
 .cardWrap1 {
     display: flex;
@@ -104,7 +178,36 @@ h3 span {
 
 /* Card type3 */
 
-/* Swiper banner */
+/* Swiper banner2*/
+
+.mySwiper {
+    padding-bottom: 30px;
+    padding-top: 20px;
+  }
+
+.mySwiper .swiper-wrapper {
+    transition-timing-function: linear;
+    box-sizing: content-box;
+  }
+.mySwiper .swiper-slide {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+  
+    border-radius: 500px;
+    box-shadow: 0px 2px 14px 0px rgba(0,0,0,0.3);
+  }
+
+.mySwiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  
+    overflow: hidden;
+  }
 
 /* Map API */
 
@@ -176,7 +279,26 @@ h3 {
 }
  /* header */
 
-/* Visual Swiper */
+/* Visual Swiper1 */
+
+.texttWrap{
+    width: 100%;
+    /* margin: 0 auto; */
+    position: absolute;
+    left:0%;
+   text-align: center;
+}
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+}
+p {
+    font-size: 1em;
+    text-align: center;
+}
+.btn {
+    display: inline-block;
+}
 
 /* Card type1 */
 .cardWrap1 .card .title {
