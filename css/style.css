@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* reset */
-html,body {height: 100%;font-family: 'Pretendard';}
+html,body {height: 100%;font-family: 'Pretendard';font-size: 18px;}
  * {margin: 0;padding: 0;box-sizing: border-box;}
  ul,li {list-style: none; margin: 0;} 
  header, footer, div {margin: 0;}
@@ -109,7 +109,44 @@ h3 span {
 /* Map API */
 
 /* footer */
-
+footer {
+    background: #F2F2F2;
+}
+.inner-text li {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    color: #666;
+}
+.inner-text li:first-child {
+    font-weight: 700;
+}
+.inner-text li span::after {
+    content: '|';
+    padding: 0 10px;
+}
+.inner-text li span:last-child::after {
+    display: none;
+}
+.footerIcon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-size: 0;
+}
+.icon_Instagram {
+    background-image: url("../images/icon_Instagram.png");
+}
+.footer-logo {
+    display: block;
+    width: 175px;
+    height: 30px;
+    font-size: 0;
+    background-size: cover;
+    background: url("../images/footer_logo.png") no-repeat;
+}
  @media screen and (max-width: 1199px) {
 /* header */
 
@@ -193,6 +230,9 @@ h3 {
 /* Map API */
 
 /* footer */
+.inner-text li {
+    font-size: 0.8em;
+}
  }
  
  @media screen and (max-width: 767px) {
