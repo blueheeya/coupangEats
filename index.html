@@ -33,7 +33,7 @@
     </div>
     <!-- E : Card type1 -->
     <!-- S : Card type2 : 조정희 -->
-    <div class="container-fluid bg-color-gr p-5">
+    <div class="bg-color-gr py-5">
         <div class="container p-5">
             <h3>빠르고 정확한 쿠팡이츠<br><span>무료배달</span>로 만나보세요!</h3>
             <div class="cardWrap2">
@@ -55,7 +55,7 @@
     <!-- E: visual -->
 
     <!-- S : Card type3 : 조정희 -->
-    <div class="container-fluid p-5">
+    <div class="container-fluid py-5">
         <div class="container p-5">
             <h3>더 좋은 경험을 위한<br><span>쿠팡이츠</span>의 새로운 시도</h3>
             <div class="cardWrap3">
@@ -73,22 +73,7 @@
     <!-- E : Card type3 -->
 
     <!-- S : Swiper banner : 최보람 -->
-    <div class="container-fluid ramWrap">
-
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 4</div>
-                <div class="swiper-slide">Slide 5</div>
-                <div class="swiper-slide">Slide 6</div>
-                <div class="swiper-slide">Slide 7</div>
-                <div class="swiper-slide">Slide 8</div>
-                <div class="swiper-slide">Slide 9</div>
-            </div>
-        </div>
-    </div>
+    <div class="container-fluid ramWrap">Swiper banner</div>
     <!-- E : Swiper banner -->
 
     <!-- S : Map API : 조재희 -->
@@ -100,94 +85,7 @@
     <!-- E : footer -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module">
-        import {cardData1,cardData2,cardData3} from "./js/cardData.js";
-        let cardD1 = "";
-        for(let i = 0 ; i<3; i++) {
-            cardD1 += `
-            <div class="card col-lg-4">
-                <a href="${cardData1[i].href}">
-                <img src="${cardData1[i].img}" class="card-img">
-                <div class="card-body">
-                  <h5 class="title">${cardData1[i].title}</h5>
-                  <p class="text">${cardData1[i].contents}</p>
-                </div>
-                </a>
-            </div>
-            `
-        }
-        let cardD2 = "";
-        for(let i = 0 ; i<3; i++) {
-            if(i % 2 == 1 ){
-                cardD2 += `
-                <div class="cardbox revers row">
-                    <img src="${cardData2[i].img}"  class="card-img col col-lg-6" alt="">
-                    <div class="card-body  col col-lg-6">
-                        <p class="comment">${cardData2[i].comment}</p>
-                        <h5 class="title">${cardData2[i].title}</h5>
-                        <p class="text">${cardData2[i].contents}</p>
-                    </div>
-                </div>
-            `
-            }else {
-                cardD2 += `
-                <div class="cardbox row">
-                    <img src="${cardData2[i].img}" class="card-img col col-lg-6" alt="">
-                    <div class="card-body col col-lg-6 px-lg-5">
-                        <p class="comment">${cardData2[i].comment}</p>
-                        <h5 class="title">${cardData2[i].title}</h5>
-                        <p class="text">${cardData2[i].contents}</p>
-                    </div>
-                </div>
-                `
-            }
-        }
-        let cardD3 = "";
-        for(let i = 0 ; i<3; i++) {
-            if(i % 2 == 1 ){
-                cardD3 += `
-                <div class="cardbox revers row">
-                    <img src="${cardData3[i].img}" class="card-img  col col-lg-6" alt="">
-                    <div class="card-body  col col-lg-6">
-                        <p class="comment">${cardData3[i].comment}</p>
-                        <h5 class="title">${cardData3[i].title}</h5>
-                        <p class="text">${cardData3[i].contents}</p>
-                    </div>
-                </div>
-            `
-            }else {
-                cardD3 += `
-                <div class="cardbox row">
-                    <img src="${cardData3[i].img}" class="card-img  col col-lg-6" alt="">
-                    <div class="card-body  col col-lg-6 px-lg-5">
-                        <p class="comment">${cardData3[i].comment}</p>
-                        <h5 class="title">${cardData3[i].title}</h5>
-                        <p class="text">${cardData3[i].contents}</p>
-                    </div>
-                </div>
-                `
-            }
-        }
-        document.querySelector(".cardWrap1").innerHTML = cardD1;
-        document.querySelector(".cardWrap2").innerHTML = cardD2;
-        document.querySelector(".cardWrap3").innerHTML = cardD3;
-    </script>
-    <script>
-        const swiperSlides = document.querySelectorAll('.swiper');
-
-        swiperSlides.forEach(function (element, index) {
-            element.classList.add("swiper-" + index);
-            let swiper = new Swiper(".swiper-" + index, {
-            autoplay: {
-                    delay: 1,
-                    desableOnInteraction: false,
-            },
-            speed: 8e3,
-            loop: true,
-            slidesPerView: "auto",
-            freemode: true
-            });
-        });
-    </script>
+    <!-- Card Data 값 js-->
+    <script type="module" src="./js/cardRouter.js"></script> 
 </body>
 </html>

@@ -29,7 +29,6 @@ h3 span {
 /* 작업 후 날릴 것*/
 .hunWrap {background: #e8f8ff;}
 .ramWrap {background: #f8deff;}
-.heeWrap {background: #ffe3a8;}
 .jungWrap {background: #bdffcb;}
 /* header */
 
@@ -67,7 +66,6 @@ h3 span {
 .cardbox {
     display: flex;
     justify-content: space-between;
-    /* gap: 50px; */
     margin-bottom: 50px;
 }
 .cardbox.revers {
@@ -78,7 +76,9 @@ h3 span {
 }
 .cardbox img {
     width: 45%;
+    display: block;
 }
+
 .cardbox .card-body {
     padding: 50px 0;
 }
@@ -155,19 +155,20 @@ h3 {
 }
 .cardbox {
     margin-bottom: 30px;
-    text-align: center;
+    /* text-align: center; */
+    flex-direction: column-reverse;
 }
 .cardbox.revers {
-    flex-direction: row-reverse;
+    flex-direction:column-reverse;
 }
 .cardbox.revers .card-body {
-    padding: 0;
+    padding: 30px 0 20px 0;
 }
 .cardbox img {
     width: 100%;
 }
 .cardbox .card-body {
-    padding: 30px 0;
+    padding: 30px 0 20px 0;
 }
 .cardbox .card-body .comment {
     font-size: 1em;
@@ -188,37 +189,7 @@ h3 {
 /* Card type3 */
 
 /* Swiper banner */
-.swiper {
-    width: 100%;
-    height: 80%;
-    padding-bottom: 30px;
-  }
 
-  .swiper-wrapper {
-    transition-timing-function: linear;
-    column-gap: 30px;
-  }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 48%;
-    transition: transform 0.3s;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-.swiper-slide:hover {
-transform: translateY(30px);
-}
 /* Map API */
 
 /* footer */
