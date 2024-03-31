@@ -26,15 +26,142 @@ h3 span {
     /* width: 1080px; */
     padding: 0;
 }
-/* 작업 후 날릴 것*/
-.hunWrap {background: #e8f8ff;}
-.ramWrap {background: #f8deff;}
-.jungWrap {background: #bdffcb;}
 /* header */
+.hunWrap {
+    position:fixed;
+    z-index: 10;
+}
+.hunWrap .container {
+    padding: 0px 45px;
+}
+.header {
+    /* width: 100%; */
+display: flex;
+justify-content: space-between;
+padding: 10px 0px;
+/* width:1240px; */
+align-items: center;
+    /* height: 100px; */
+    /* border: 3px solid black; */
+}
+.hunWrap .logoimage {
+    padding: 10px 0px;
+}
+.hunWrap .logoimage>a{
+    display: block;
+    /* background-color: red; */
+    width: 200px;
+    /* border: 3px solid black; */
+}
+.hunWrap .logoimage>a>img{
+    display: block;
+    /* background-color: pink; */
+    width: 100%;
+}
 
+
+.hunWrap .header_menu{
+    display: flex;
+    gap: 20px;
+    padding: 10px ;
+    align-items: center;
+    /* border: 3px solid black; */
+}
+.hunWrap .header_menu>li{
+    /* border: 3px solid black; */
+}
+.hunWrap .header_menu>li>a{
+    display: block;
+    width: 100%;
+    padding: 0px 10px;
+    /* border: 3px solid pink; */
+    color: white;
+    font-weight: 800;
+}
+.hunWrap #appbtn {
+    background-color: #01AFFF;
+    padding: 5px 30px;
+    border-radius: 10px;
+}
+
+.toggle_button{
+    width: 20px;
+    height: 20px;
+    /* background: skyblue; */
+    position: relative;
+    /* position: fixed; */
+    right: 20px;
+    top: 20px;
+    cursor:pointer;
+    display: none;
+   
+
+}
+.toggle_button > .bar{
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    border-radius: 1px;
+    position: absolute;
+    transition:0.3s
+}
+
+.toggle_button > .bar:nth-child(2){
+    top: 50%;margin-top: -1px;
+    opacity: 1;
+}
+.toggle_button > .bar:nth-child(3){
+    bottom: 0;
+}
+
+
+.toggle_button.active > .bar:nth-child(1){
+    /* transform:translate(0,9px) rotate(45deg); */
+    transform: translate(0,9px) rotate(45deg);
+}
+.toggle_button.active > .bar:nth-child(2){opacity: 0;}
+.toggle_button.active > .bar:nth-child(3){
+    transform: translate(0,-9px) rotate(-45deg);
+}
+.textscroll {
+    transition: color 0.3s ease; /* 색상 변경을 부드럽게 만들기 위한 transition */
+    
+}
+.textscroll.scrolled {
+    color: black !important; /* 스크롤 시 적용할 색상 */
+}
+.dropbar {
+    background-color: white;
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: 100px;
+    width: 80%;
+    padding: 15px;
+}
+/* .dropbar ul{
+    width: 100%;
+} */
+.dropbar li{
+width: 100%;
+}
+.dropbar ul>li>a {
+    display: block;
+    color:black;
+    /* border: 1px solid black; */
+    text-align: left;
+    font-weight: 600;
+    width: 100%;
+    padding: 10px 10px;
+}
+.dropbar #toggle_btn {
+    background-color: #01AFFF;
+    text-align: center;
+    color: white;
+    /* padding: 5px 30px; */
+    border-radius: 5px;
+}
 /* Visual Swiper1 */
-
-
 .imageWrap {
     width: 100%;
     height: 700px;
@@ -62,15 +189,14 @@ h3 span {
     width: 1080px;
     left:20%;
 }
-
-h2 {
+.imageWrap h2 {
     font-size: 55px;
     padding-bottom: 20px;
     font-weight: 800;
     color: #fff;
 }
 
-p {
+.imageWrap p {
     font-size: 18px;
     padding-bottom: 10px;
     color: #fff !important
@@ -175,7 +301,29 @@ p {
     color: #666;
 }
 /* Visual */
-
+.hunVisulWrap.visualbgimage{
+    background: url("/images/contents_visual.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    height: 680px;
+   }
+   .hunVisulWrap>.visual{
+       position: absolute;
+       left: 23%;
+       top: 15%;
+       
+   }
+   .hunVisulWrap>.visual>h2 {
+       font-weight: 800;
+       font-size: 50px;
+       padding-bottom: 10px;
+       color: #333;
+   }
+   .hunVisulWrap>.visual>p {
+       font-weight: 700;
+   }
 /* Card type3 */
 
 /* Swiper banner2*/
@@ -278,7 +426,20 @@ h3 {
     line-height: 1em;
 }
  /* header */
-
+ .hunWrap{
+    position: static;
+ }
+.hunWrap .header_menu{
+    display: none;
+}
+.toggle_button{
+    display: block;
+}
+.navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 24px;
+}
 /* Visual Swiper1 */
 
 .texttWrap{
@@ -288,11 +449,11 @@ h3 {
     left:0%;
    text-align: center;
 }
-h2 {
+.imageWrap h2 {
     font-size: 2.5em;
     text-align: center;
 }
-p {
+.imageWrap p {
     font-size: 1em;
     text-align: center;
 }
