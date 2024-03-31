@@ -1,558 +1,662 @@
 @charset "utf-8";
 
 /* reset */
-html,body {height: 100%;font-family: 'Pretendard';font-size: 18px;}
- * {margin: 0;padding: 0;box-sizing: border-box;}
- ul,li {list-style: none; margin: 0;} 
- header, footer, div {margin: 0;}
- a:link,a:visited {text-decoration: none; color: #333;}
- img {display: block;}
+html,
+body {
+  height: 100%;
+  font-family: "Pretendard";
+  font-size: 18px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+}
+header,
+footer,
+div {
+  margin: 0;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #333;
+}
+img {
+  display: block;
+}
 
 /* 공통 사용 CSS */
 h3 {
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 60px;
-    color: #333;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 60px;
+  color: #333;
 }
 
 h3 span {
-    color: #01AFFF;
+  color: #01afff;
 }
 .container-fluid {
-    padding: 0;
+  padding: 0;
 }
 .container {
-    /* width: 1080px; */
-    padding: 0;
+  /* width: 1080px; */
+  padding: 0;
 }
 /* header */
 .hunWrap {
-    position:fixed;
-    z-index: 10;
+  position: fixed;
+  z-index: 10;
 }
 .hunWrap .container {
-    padding: 0px 45px;
+  padding: 0px 45px;
 }
 .header {
-    /* width: 100%; */
-display: flex;
-justify-content: space-between;
-padding: 10px 0px;
-/* width:1240px; */
-align-items: center;
-    /* height: 100px; */
-    /* border: 3px solid black; */
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+  /* width:1240px; */
+  align-items: center;
+  /* height: 100px; */
+  /* border: 3px solid black; */
 }
 .hunWrap .logoimage {
-    padding: 10px 0px;
+  padding: 10px 0px;
 }
-.hunWrap .logoimage>a{
-    display: block;
-    /* background-color: red; */
-    width: 200px;
-    /* border: 3px solid black; */
+.hunWrap .logoimage > a {
+  display: block;
+  /* background-color: red; */
+  width: 200px;
+  /* border: 3px solid black; */
 }
-.hunWrap .logoimage>a>img{
-    display: block;
-    /* background-color: pink; */
-    width: 100%;
+.hunWrap .logoimage > a > img {
+  display: block;
+  /* background-color: pink; */
+  width: 100%;
 }
 
-
-.hunWrap .header_menu{
-    display: flex;
-    gap: 20px;
-    padding: 10px ;
-    align-items: center;
-    /* border: 3px solid black; */
+.hunWrap .header_menu {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
+  /* border: 3px solid black; */
 }
-.hunWrap .header_menu>li{
-    /* border: 3px solid black; */
+.hunWrap .header_menu > li {
+  /* border: 3px solid black; */
 }
-.hunWrap .header_menu>li>a{
-    display: block;
-    width: 100%;
-    padding: 0px 10px;
-    /* border: 3px solid pink; */
-    color: white;
-    font-weight: 800;
+.hunWrap .header_menu > li > a {
+  display: block;
+  width: 100%;
+  padding: 0px 10px;
+  /* border: 3px solid pink; */
+  color: white;
+  font-weight: 800;
 }
 .hunWrap #appbtn {
-    background-color: #01AFFF;
-    padding: 5px 30px;
-    border-radius: 10px;
+  background-color: #01afff;
+  padding: 5px 30px;
+  border-radius: 10px;
 }
 
-.toggle_button{
-    width: 20px;
-    height: 20px;
-    /* background: skyblue; */
-    position: relative;
-    /* position: fixed; */
-    right: 20px;
-    top: 20px;
-    cursor:pointer;
-    display: none;
-   
-
+.toggle_button {
+  width: 20px;
+  height: 20px;
+  /* background: skyblue; */
+  position: relative;
+  /* position: fixed; */
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  display: none;
 }
-.toggle_button > .bar{
-    width: 20px;
-    height: 2px;
-    background-color: black;
-    border-radius: 1px;
-    position: absolute;
-    transition:0.3s
+.toggle_button > .bar {
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  border-radius: 1px;
+  position: absolute;
+  transition: 0.3s;
 }
 
-.toggle_button > .bar:nth-child(2){
-    top: 50%;margin-top: -1px;
-    opacity: 1;
+.toggle_button > .bar:nth-child(2) {
+  top: 50%;
+  margin-top: -1px;
+  opacity: 1;
 }
-.toggle_button > .bar:nth-child(3){
-    bottom: 0;
+.toggle_button > .bar:nth-child(3) {
+  bottom: 0;
 }
 
-
-.toggle_button.active > .bar:nth-child(1){
-    /* transform:translate(0,9px) rotate(45deg); */
-    transform: translate(0,9px) rotate(45deg);
+.toggle_button.active > .bar:nth-child(1) {
+  /* transform:translate(0,9px) rotate(45deg); */
+  transform: translate(0, 9px) rotate(45deg);
 }
-.toggle_button.active > .bar:nth-child(2){opacity: 0;}
-.toggle_button.active > .bar:nth-child(3){
-    transform: translate(0,-9px) rotate(-45deg);
+.toggle_button.active > .bar:nth-child(2) {
+  opacity: 0;
+}
+.toggle_button.active > .bar:nth-child(3) {
+  transform: translate(0, -9px) rotate(-45deg);
 }
 .textscroll {
-    transition: color 0.3s ease; /* 색상 변경을 부드럽게 만들기 위한 transition */
-    
+  transition: color 0.3s ease; /* 색상 변경을 부드럽게 만들기 위한 transition */
 }
 .textscroll.scrolled {
-    color: black !important; /* 스크롤 시 적용할 색상 */
+  color: black !important; /* 스크롤 시 적용할 색상 */
 }
 .dropbar {
-    background-color: white;
-    display: none;
-    position: absolute;
-    z-index: 9999;
-    top: 100px;
-    width: 80%;
-    padding: 15px;
+  background-color: white;
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  top: 100px;
+  width: 80%;
+  padding: 15px;
 }
 /* .dropbar ul{
     width: 100%;
 } */
-.dropbar li{
-width: 100%;
+.dropbar li {
+  width: 100%;
 }
-.dropbar ul>li>a {
-    display: block;
-    color:black;
-    /* border: 1px solid black; */
-    text-align: left;
-    font-weight: 600;
-    width: 100%;
-    padding: 10px 10px;
+.dropbar ul > li > a {
+  display: block;
+  color: black;
+  /* border: 1px solid black; */
+  text-align: left;
+  font-weight: 600;
+  width: 100%;
+  padding: 10px 10px;
 }
 .dropbar #toggle_btn {
-    background-color: #01AFFF;
-    text-align: center;
-    color: white;
-    /* padding: 5px 30px; */
-    border-radius: 5px;
+  background-color: #01afff;
+  text-align: center;
+  color: white;
+  /* padding: 5px 30px; */
+  border-radius: 5px;
 }
 /* Visual Swiper1 */
 .imageWrap {
-    width: 100%;
-    height: 700px;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  width: 100%;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
-.imageWrap.img01{
-    background-image: url("../images/swiper02.jpg");
+.imageWrap.img01 {
+  background-image: url("../images/swiper02.jpg");
 }
-.imageWrap.img02{
-    background-image: url("../images/swiper03.jpg");
+.imageWrap.img02 {
+  background-image: url("../images/swiper03.jpg");
 }
-.imageWrap.img03{
-    background-image: url("../images/swiper04.jpg");
+.imageWrap.img03 {
+  background-image: url("../images/swiper04.jpg");
 }
-.imageWrap.img04{
-    background-image: url("../images/swiper05.jpg");
+.imageWrap.img04 {
+  background-image: url("../images/swiper05.jpg");
 }
 
-.texttWrap{
-    width: 1080px;
-    left:20%;
+.texttWrap {
+  width: 1080px;
+  left: 20%;
 }
 .imageWrap h2 {
-    font-size: 55px;
-    padding-bottom: 20px;
-    font-weight: 800;
-    color: #fff;
+  font-size: 55px;
+  padding-bottom: 20px;
+  font-weight: 800;
+  color: #fff;
 }
 
 .imageWrap p {
-    font-size: 18px;
-    padding-bottom: 10px;
-    color: #fff !important
+  font-size: 18px;
+  padding-bottom: 10px;
+  color: #fff !important;
 }
 
 .btn {
-    width: 200px;
-    height: 50px;
-    background: #000;
-    color: #fff;
-    border-color: #01afff;
-    border-radius: 4px;
-    font-size: 18px;
-    padding-top: 9px;
-    padding-bottom: 9px;
+  width: 200px;
+  height: 50px;
+  background: #000;
+  color: #fff;
+  border-color: #01afff;
+  border-radius: 4px;
+  font-size: 18px;
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 
 .btn:hover {
-    background-color: #000;
-    color: #fff;
-    border-color: #01afff;
+  background-color: #000;
+  color: #fff;
+  border-color: #01afff;
 }
 
 .Swiper1 {
- width: 100%;
- overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 }
 
 .Swiper1 .swiper-button-next {
-    color: #fff;
-    top : 40%;
+  color: #fff;
+  top: 40%;
 }
 
 .Swiper1 .swiper-button-prev {
-    color: #fff;
-    top : 40%;
+  color: #fff;
+  top: 40%;
 }
 /* Card type1 */
 .cardWrap1 {
-    display: flex;
+  display: flex;
 }
 .cardWrap1 .card {
-    border: 0;
-    text-align: center;
+  border: 0;
+  text-align: center;
 }
 .cardWrap1 .card img {
-    border-radius: 0;
+  border-radius: 0;
 }
 .cardWrap1 .card .title {
-    font-size: 28px;
-    font-weight: 800;
-    color: #333;
+  font-size: 28px;
+  font-weight: 800;
+  color: #333;
 }
 .cardWrap1 .card .text {
-    font-size: 18px;
-    font-weight: 400;
-    color: #666;
-    line-height: 1.7em;
+  font-size: 18px;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.7em;
 }
 /* Card type2 & type 3 */
 .bg-color-gr {
-    background: #F9FAFB;
+  background: #f9fafb;
 }
-.cardWrap2,.cardWrap3  {
-    padding: 54px 0;
+.cardWrap2,
+.cardWrap3 {
+  padding: 54px 0;
 }
 .cardbox {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 .cardbox.revers {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 .cardbox.revers .card-body {
-    padding-left: 0;
+  padding-left: 0;
 }
 .cardbox img {
-    width: 45%;
-    display: block;
+  width: 45%;
+  display: block;
 }
 
 .cardbox .card-body {
-    padding: 50px 0;
+  padding: 50px 0;
 }
 .cardbox .card-body .comment {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1em;
-    color: #01AFFF;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1em;
+  color: #01afff;
 }
 .cardbox .card-body .title {
-    font-size: 28px;
-    font-weight: 800;
-    line-height: 1em;
-    color: #333;
-    padding-bottom: 10px;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1em;
+  color: #333;
+  padding-bottom: 10px;
 }
 .cardbox .card-body .text {
-    font-size: 18px;
-    line-height: 1.5em;
-    color: #666;
+  font-size: 18px;
+  line-height: 1.5em;
+  color: #666;
 }
 /* Visual */
-.hunVisulWrap.visualbgimage{
-    background: url("/images/contents_visual.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    background-position: center;
-    height: 680px;
-   }
-   .hunVisulWrap>.visual{
-       position: absolute;
-       left: 23%;
-       top: 15%;
-       
-   }
-   .hunVisulWrap>.visual>h2 {
-       font-weight: 800;
-       font-size: 50px;
-       padding-bottom: 10px;
-       color: #333;
-   }
-   .hunVisulWrap>.visual>p {
-       font-weight: 700;
-   }
+.hunVisulWrap.visualbgimage {
+  background: url("/images/contents_visual.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  height: 680px;
+}
+.hunVisulWrap > .visual {
+  position: absolute;
+  left: 23%;
+  top: 15%;
+}
+.hunVisulWrap > .visual > h2 {
+  font-weight: 800;
+  font-size: 50px;
+  padding-bottom: 10px;
+  color: #333;
+}
+.hunVisulWrap > .visual > p {
+  font-weight: 700;
+}
 /* Card type3 */
 
 /* Swiper banner2*/
 
 .mySwiper {
-    padding-bottom: 30px;
-    padding-top: 20px;
-  }
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
 
 .mySwiper .swiper-wrapper {
-    transition-timing-function: linear;
-    box-sizing: content-box;
-  }
+  transition-timing-function: linear;
+  box-sizing: content-box;
+}
 .mySwiper .swiper-slide {
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90px;
-    height: 90px;
-  
-    border-radius: 500px;
-    box-shadow: 0px 2px 14px 0px rgba(0,0,0,0.3);
-  }
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+
+  border-radius: 500px;
+  box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.3);
+}
 
 .mySwiper .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-  
-    overflow: hidden;
-  }
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
 
 /* Map API */
+.mapWrap {
+  margin: 64px 0;
+  padding: 0;
+  position: relative;
+}
+
+#map {
+  width: 100%;
+  height: 600px;
+}
+.textWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  text-align: center;
+}
+
+.search {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  height: 500px;
+  margin: 10px 0 30px 10px;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+  font-size: 12px;
+  border-radius: 10px;
+}
+.input {
+  /* margin: 10px; */
+  /* padding-left: 10px; */
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #999;
+}
+
+.inputText {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#searchResult {
+  margin: 0;
+  padding: 0;
+}
+.searchList {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0 5px;
+  list-style-type: none;
+}
+
+.listitem {
+  border-bottom: 1px solid #888;
+  padding-bottom: 7px;
+}
+
+.searchList p {
+  font-size: 13px;
+  color: #333;
+  margin: 0;
+}
+
+.searchList span {
+  font-size: 11px;
+  color: #666;
+}
+
+.searchList a {
+  color: #01afff;
+}
 
 /* footer */
 footer {
-    background: #F2F2F2;
+  background: #f2f2f2;
 }
 .inner-text li {
-    margin: 0;
-    padding: 0;
-    font-size: 15px;
-    color: #666;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  color: #666;
 }
 .inner-text li:first-child {
-    font-weight: 700;
+  font-weight: 700;
 }
 .inner-text li span::after {
-    content: '|';
-    padding: 0 10px;
+  content: "|";
+  padding: 0 10px;
 }
 .inner-text li span:last-child::after {
-    display: none;
+  display: none;
 }
 .footerIcon {
-    display: block;
-    width: 24px;
-    height: 24px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    font-size: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-size: 0;
 }
 .icon_Instagram {
-    background-image: url("../images/icon_Instagram.png");
+  background-image: url("../images/icon_Instagram.png");
 }
 .footer-logo {
-    display: block;
-    width: 175px;
-    height: 30px;
-    font-size: 0;
-    background-size: cover;
-    background: url("../images/footer_logo.png") no-repeat;
+  display: block;
+  width: 175px;
+  height: 30px;
+  font-size: 0;
+  background-size: cover;
+  background: url("../images/footer_logo.png") no-repeat;
 }
- @media screen and (max-width: 1199px) {
-/* header */
+@media screen and (max-width: 1199px) {
+  /* header */
 
-/* Visual Swiper */
+  /* Visual Swiper */
 
-/* Card type1 */
+  /* Card type1 */
 
-/* Card type2 */
+  /* Card type2 */
 
-/* Visual */
+  /* Visual */
 
-/* Card type3 */
+  /* Card type3 */
 
-/* Swiper banner */
+  /* Swiper banner */
 
-/* Map API */
+  /* Map API */
 
-/* footer */
- }
- 
- @media screen and (max-width: 991px) {
+  /* footer */
+}
 
- /* 공통 사용 CSS */
-h3 {
+@media screen and (max-width: 991px) {
+  /* 공통 사용 CSS */
+  h3 {
     font-size: 2em;
     line-height: 1em;
-}
- /* header */
- .hunWrap{
+  }
+  /* header */
+  .hunWrap {
     position: static;
- }
-.hunWrap .header_menu{
+  }
+  .hunWrap .header_menu {
     display: none;
-}
-.toggle_button{
+  }
+  .toggle_button {
     display: block;
-}
-.navbar {
+  }
+  .navbar {
     flex-direction: column;
     align-items: center;
     padding: 8px 24px;
-}
-/* Visual Swiper1 */
+  }
+  /* Visual Swiper1 */
 
-.texttWrap{
+  .texttWrap {
     width: 100%;
     /* margin: 0 auto; */
     position: absolute;
-    left:0%;
-   text-align: center;
-}
-.imageWrap h2 {
+    left: 0%;
+    text-align: center;
+  }
+  .imageWrap h2 {
     font-size: 2.5em;
     text-align: center;
-}
-.imageWrap p {
+  }
+  .imageWrap p {
     font-size: 1em;
     text-align: center;
-}
-.btn {
+  }
+  .btn {
     display: inline-block;
-}
+  }
 
-/* Card type1 */
-.cardWrap1 .card .title {
+  /* Card type1 */
+  .cardWrap1 .card .title {
     font-size: 1.5em;
-}
-.cardWrap1 .card .text {
+  }
+  .cardWrap1 .card .text {
     font-size: 1em;
     line-height: 1.5em;
-}
-/* Card type2 & type 3 */
-.cardWrap2,.cardWrap3  {
+  }
+  /* Card type2 & type 3 */
+  .cardWrap2,
+  .cardWrap3 {
     padding: 54px 0;
-}
-.cardbox {
+  }
+  .cardbox {
     margin-bottom: 30px;
     /* text-align: center; */
     flex-direction: column-reverse;
-}
-.cardbox.revers {
-    flex-direction:column-reverse;
-}
-.cardbox.revers .card-body {
+  }
+  .cardbox.revers {
+    flex-direction: column-reverse;
+  }
+  .cardbox.revers .card-body {
     padding: 30px 0 20px 0;
-}
-.cardbox img {
+  }
+  .cardbox img {
     width: 100%;
-}
-.cardbox .card-body {
+  }
+  .cardbox .card-body {
     padding: 30px 0 20px 0;
-}
-.cardbox .card-body .comment {
+  }
+  .cardbox .card-body .comment {
     font-size: 1em;
     line-height: 1em;
-}
-.cardbox .card-body .title {
+  }
+  .cardbox .card-body .title {
     font-size: 1.5em;
     line-height: 1em;
     padding-bottom: 10px;
-}
-.cardbox .card-body .text {
+  }
+  .cardbox .card-body .text {
     font-size: 1em;
     line-height: 1.5em;
-}
+  }
 
-/* Visual */
+  /* Visual */
 
-/* Card type3 */
+  /* Card type3 */
 
-/* Swiper banner */
+  /* Swiper banner */
 
-/* Map API */
+  /* Map API */
+  #map {
+    width: 100%;
+    height: 500px;
+  }
 
-/* footer */
-.inner-text li {
+  /* footer */
+  .inner-text li {
     font-size: 0.8em;
+  }
 }
- }
- 
- @media screen and (max-width: 767px) {
- /* header */
 
-/* Visual Swiper */
+@media screen and (max-width: 767px) {
+  /* header */
 
-/* Card type1 */
+  /* Visual Swiper */
 
-/* Card type2 */
+  /* Card type1 */
 
-/* Visual */
+  /* Card type2 */
 
-/* Card type3 */
+  /* Visual */
 
-/* Swiper banner */
+  /* Card type3 */
 
-/* Map API */
+  /* Swiper banner */
 
-/* footer */
- }
- @media screen and (max-width: 575px) {
- /* header */
+  /* Map API */
 
-/* Visual Swiper */
+  /* footer */
+}
+@media screen and (max-width: 575px) {
+  /* header */
 
-/* Card type1 */
+  /* Visual Swiper */
 
-/* Card type2 */
+  /* Card type1 */
 
-/* Visual */
+  /* Card type2 */
 
-/* Card type3 */
+  /* Visual */
 
-/* Swiper banner */
+  /* Card type3 */
 
-/* Map API */
+  /* Swiper banner */
 
-/* footer */
- }
+  /* Map API */
+
+  /* footer */
+}
