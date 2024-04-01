@@ -1,6 +1,6 @@
 import {cardData1,cardData2,cardData3} from "./cardData.js";
 let cardD1 = "";
-for(let i = 0 ; i<3; i++) {
+for(let i = 0 ; i<cardData1.length; i++) {
     cardD1 += `
     <div class="card col-lg-4">
         <a href="${cardData1[i].href}">
@@ -14,7 +14,7 @@ for(let i = 0 ; i<3; i++) {
     `
 }
 let cardD2 = "";
-for(let i = 0 ; i<3; i++) {
+for(let i = 0 ; i<cardData2.length; i++) {
     if(i % 2 == 1 ){
         cardD2 += `
         <div class="cardbox revers row">
