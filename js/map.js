@@ -1,10 +1,17 @@
 var mapContainer = document.getElementById("map"); // 지도를 표시할 div
 var mapOption = {
-  center: new kakao.maps.LatLng(37.48102689959951, 126.8793096449964), // 지도의 중심좌표
+  center: new kakao.maps.LatLng(37.48102689959951, 126.8793096449964),
+  draggable: false, // 지도의 중심좌표
   level: 5, // 지도의 확대 레벨
 };
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+// 버튼 클릭에 따라 지도 확대, 축소 기능을 막거나 풀고 싶은 경우에는 map.setZoomable 함수를 사용합니다
+function setZoomable(zoomable) {
+  // 마우스 휠로 지도 확대,축소 가능여부를 설정합니다
+  map.setZoomable(zoomable);
+}
 
 var imageSrc =
   "https://cdn1.iconfinder.com/data/icons/ecommerce-61/48/eccomerce_-_location-1024.png"; // 마커이미지의 주소입니다
