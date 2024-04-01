@@ -40,7 +40,7 @@ for(let i = 0 ; i<cardData2.length; i++) {
     }
 }
 let cardD3 = "";
-for(let i = 0 ; i<cardData1.length; i++) {
+for(let i = 0 ; i<cardData3.length; i++) {
     if(i % 2 == 1 ){
         cardD3 += `
         <div class="cardbox revers row">
